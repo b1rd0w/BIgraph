@@ -8,7 +8,6 @@ export async function POST(request: Request) {
 	const userFind = await prisma.user.findFirst({
 		where: {
 			id: user.id,
-			role: user.role,
 			createdAt: user.createdAt
 		}
 	})
