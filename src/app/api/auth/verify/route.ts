@@ -13,9 +13,9 @@ export async function POST(request: Request) {
 	})
 	if (!userFind) return NextResponse.json({ message: `User not found` }, { status: 404 });
 	const token = await createJWT({
-		id: user.id,
-		createdAt: user.createdAt,
-		role: user.role,
+		id: userFind.id,
+		createdAt: userFind.createdAt,
+		role: userFind.role,
 	})
 	return NextResponse.json({ message: 'User successfully found', user, token }, { status: 200 })
 }
