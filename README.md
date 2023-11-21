@@ -1,5 +1,5 @@
 # Fullstack Telegra.ph Clone: Next.js 14, React, Tailwind, Prisma ORM
-![bigraph](https://github.com/B1RDOW/bi-graph/assets/61405779/6fdcff92-1993-4ab9-b1de-5b14a306d2a2)
+![bigraph](https://github.com/B1RDOW/BIgraph/assets/61405779/e29c4c8f-1c01-4899-989a-f2106d830a67)
 
 
 This is a repository for Fullstack [Telegra.ph](https://telegra.ph) Clone: Next.js 14, React, Tailwind, Prisma ORM | 2023
