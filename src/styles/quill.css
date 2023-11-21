@@ -1,0 +1,112 @@
+code {
+	color: #f4f4f5 !important;
+	background-color: #27272a !important;
+}
+
+::-webkit-input-placeholder {
+	font-weight: 400 !important;
+}
+
+:-ms-input-placeholder {
+	font-weight: 400 !important;
+}
+
+:-moz-placeholder {
+	font-weight: 400 !important;
+}
+
+::-moz-placeholder {
+	font-weight: 400 !important;
+}
+
+.ql-container {
+	font-size: 18px !important;
+}
+
+iframe.ql-video {
+	width: 350px !important;
+	height: 250px !important;
+}
+
+.ql-editor p img {
+	border-radius: 1rem !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.ql-editor {
+	overflow: hidden !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+.ql-editor.ql-blank::before {
+	font-style: normal !important;
+	font-family: var(--font-inter);
+	font-weight: 300 !important;
+	left: 0px !important;
+	right: 0px !important;
+}
+
+.ql-editor.ql-blank::before {
+	color: #9ca3af !important;
+}
+
+.ql-syntax {
+	background-color: #27272a !important;
+}
+
+.ql-bubble .ql-tooltip {
+	background-color: #292927 !important;
+	border-radius: 6px !important;
+	padding: 9px 22px !important;
+}
+
+.ql-container.ql-bubble:not(.ql-disabled) a::before {
+	background-color: #292927 !important;
+	border-radius: 6px !important;
+	font-size: 14px !important;
+	top: 60px !important;
+	padding: 7px 10px !important;
+}
+
+.ql-tooltip-arrow {
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
+.ql-tooltip-editor input[type=text] {
+	top: 0px !important;
+	left: 0px !important;
+}
+
+.ql-tooltip-editor input[type=text]::placeholder {
+	color: transparent !important;
+	visibility: hidden !important;
+}
+
+.ql-toolbar {
+	transform: scale(1.2);
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+.ql-container.ql-bubble:not(.ql-disabled) a::after {
+	color: transparent !important;
+	visibility: hidden !important;
+}
+
+.ql-tooltip {
+	transform: translateY(-165%) !important;
+	width: auto !important;
+}
+
+.ql-formats {
+	margin: 0px !important;
+	margin-left: 2px !important;
+	margin-right: 2px !important;
+}
+
+.ql-bold {
+	background-color: #757575;
+}

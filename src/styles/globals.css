@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.gray-button {
+		@apply dark:hover:bg-zinc-100 dark:hover:text-zinc-800 hover:bg-zinc-800 hover:text-zinc-100 border-zinc-800 dark:border-zinc-100 text-zinc-800 dark:text-zinc-100 transition-colors;
+	}
+
+	.gray-button-toggled {
+		@apply dark:bg-zinc-100 dark:text-zinc-800 bg-zinc-800 text-zinc-100 border-zinc-800 dark:border-zinc-100 transition-colors;
+	}
+
+	.red-button {
+		@apply dark:hover:bg-rose-600 dark:hover:text-zinc-800 hover:bg-rose-600 hover:text-zinc-100 border-rose-600 text-rose-600 transition-colors;
+	}
+
+	.red-button-toggled {
+		@apply dark:bg-rose-600 dark:text-zinc-800 bg-rose-600 text-zinc-100 border-rose-600 transition-colors;
+	}
+}
