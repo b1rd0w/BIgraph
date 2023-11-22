@@ -1,3 +1,4 @@
+import { clearHtml } from "@/components/search";
 import prisma from "@/libs/prisma";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -15,11 +16,16 @@ export const getPost = cache(async (slug: string) => {
 
 export async function generateMetadata({ params: { slug } }: SlugParams): Promise<Metadata> {
 	const post = await getPost(slug);
+	const description = clearHtml(post?.content || "")
 	return {
 		title: `${post?.title} - BIgraph`,
 		openGraph: {
 			title: `${post?.title} - BIgraph`,
-			description: post?.content.replace(/<[^>]+>/g, ''),
+			description,
+		},
+		twitter: {
+			title: `${post?.title} - BIgraph`,
+			description,
 		},
 	}
 }

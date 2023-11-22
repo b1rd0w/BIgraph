@@ -17,7 +17,7 @@ git clone https://github.com/B1RDOW/BIgraph.git
 ### Install packages
 
 ```shell
-npm i
+npm install
 ```
 
 ### Setup .env file

@@ -1,4 +1,4 @@
-import { changePostAccess, checkPostLength, createPost, deletePost, editPost } from '@/libs/post';
+import { changePostAccess, createPost, deletePost, editPost, isValidPost } from '@/libs/post';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -74,7 +74,7 @@ export default function PostComponent({ ...props }) {
 	}
 
 	async function handlePost() {
-		if (!checkPostLength(title, name, content)) {
+		if (!isValidPost(title, name, content)) {
 			return toast.error("Check the length of the title, name or content");
 		}
 		if (isPostBig) {

@@ -3,38 +3,35 @@ import axios from 'axios';
 
 const NEXT_URL = process.env.NEXT_URL || "";
 
-export async function getUser(token: string | undefined) {
+function handleAxiosError(operation: string, error: unknown) {
+	if (axios.isAxiosError(error) && error.response) {
+		throw error.response.data.message || `${operation} error: ${error.response.statusText} (${error.response.status})`;
+	}
+}
+
+export async function fetchUser(token: string | undefined) {
 	try {
 		const response = await axios.post(`${NEXT_URL}/api/auth/login`, token);
 		if (response.status === 200) return response.data;
 	} catch (error) {
-		if (axios.isAxiosError(error) && error.response) {
-			if (error.response.data.message) throw error.response.data.message
-			else throw `Authorization error: ${error.response.statusText} (${error.response.status})`
-		}
+		handleAxiosError("User authorization", error);
 	}
 }
 
-export async function createUser() {
+export async function createUserAccount() {
 	try {
 		const response = await axios.post(`${NEXT_URL}/api/auth/register`);
 		if (response.status === 200) return response.data;
 	} catch (error) {
-		if (axios.isAxiosError(error) && error.response) {
-			if (error.response.data.message) throw error.response.data.message
-			else throw `Registration error: ${error.response.statusText} (${error.response.status})`
-		}
+		handleAxiosError("User registration", error);
 	}
 }
 
-export async function verifyUser(user: User) {
+export async function verifyUserAccount(userData: User) {
 	try {
-		const response = await axios.post(`${NEXT_URL}/api/auth/verify`, user);
+		const response = await axios.post(`${NEXT_URL}/api/auth/verify`, userData);
 		if (response.status === 200) return response.data;
 	} catch (error) {
-		if (axios.isAxiosError(error) && error.response) {
-			if (error.response.data.message) throw error.response.data.message
-			else throw `User verification error: ${error.response.statusText} (${error.response.status})`
-		}
+		handleAxiosError("User verification", error);
 	}
 }
