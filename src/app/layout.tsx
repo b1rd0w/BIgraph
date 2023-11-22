@@ -2,7 +2,7 @@ import Footer from '@/components/navigation/footer';
 import Header from '@/components/navigation/header';
 import '@/styles/globals.css';
 import '@/styles/quill.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 
@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     },
     description: 'BIgraph is a minimalist publishing tool that allows you to create richly formatted posts and push them to the Web in just a click.',
     keywords: 'BIgraph, Telegraph, BIRDOW, телеграф, биграф, bi-graph',
+    manifest: "/manifest.json",
 }
+export const viewport: Viewport = {
+    themeColor: "#FFFFFF",
+};
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     return (
