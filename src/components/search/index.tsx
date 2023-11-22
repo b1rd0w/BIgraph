@@ -110,7 +110,7 @@ export default function SearchComponent() {
 	)
 }
 
-export function clearHtml(html: string) {
+function clearHtml(html: string) {
 	const cheerio = require('cheerio');
 	const $ = cheerio.load(html);
 	return $.text();
